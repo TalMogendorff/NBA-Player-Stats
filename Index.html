@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Enter your description here" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css">
+    <link rel="icon" href="https://www.iconarchive.com/download/i103841/blackvariant/button-ui-requests-13/NBA.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Graduate&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script defer src="app.js"></script>
+    <title>NBA Player Stats</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+
+            font-family: 'Graduate', cursive;
+        }
+
+
+        #sectionone {
+            background: url(./img/bgc.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100%;
+            height: 100vh;
+        }
+
+        #intro {
+            background-color: rgba(219, 216, 216, 0.4);
+            border-radius: 15px;
+            margin: 0 auto;
+            width: 50%;
+            height: 50vh;
+        }
+
+        #headLineCont {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: linear-gradient(to bottom right, blue, blue, rgb(219, 216, 216), red, red);
+            box-sizing: border-box;
+            width: 80vw;
+            margin-left: 11%;
+            border: 2px solid white;
+            border-radius: 100px;
+
+        }
+
+        #headLine {
+
+            font-size: 5rem;
+            color: whitesmoke;
+            text-shadow: 1px 6px black;
+        }
+
+        #button {
+            margin-top: 1%;
+        }
+
+        #searchBarCont {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            display: grid;
+            grid-template-rows: repeat(3, 1fr);
+        }
+
+        #error {
+            color: red;
+            font-size: 11px;
+            margin: 0 auto;
+            border-bottom: red 2px solid;
+            border-top: red 2px solid;
+            background-color: rgba(219, 216, 216, 0.6);
+        }
+
+        #playerInput {
+            width: 50vw;
+            position: relative;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        #button {
+            font-size: 1.2rem;
+            background-color: rgb(253, 197, 14);
+            border-radius: 10px;
+        }
+
+        #button:hover {
+            background-color: rgb(187, 145, 7);
+        }
+
+        #statsCont {
+            text-align: center;
+            background: url(./img/bgc2.jpg);
+            color: black;
+            font-weight: bold;
+
+        }
+
+        #playerFullName {
+            margin-top: 1%;
+            margin: 0 auto;
+            text-align: center;
+            color: white;
+            background-color: rgba(219, 216, 216, 0.8);
+            width: 30vw;
+            border-radius: 30px;
+        }
+
+        #playerDisplay {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="sectionone">
+        <header id="headLineCont" class="animate__animated animate__bounceIn">
+            <p id="headLine" class="animate__animated animate__tada animate__delay-1s">NPS - NBA Player Stats🏀</p>
+        </header>
+        <br>
+        <div id='intro' class="animate__animated animate__fadeIn">
+            <p id="introName"> <span style="font-size: 2.5rem;">Project by : </span><span style="font-size: 2rem;">Tal
+                    Mogendorff</span>
+                <br>
+                <br>
+                <span style="font-size: 2.5rem;">Technologies : </span><span style="font-size: 2rem;">html, css,
+                    bootstrap, JavaScripit (Vanilla, es6+, oop, promises, fetch, async, object entries)</span>
+                <br>
+                <br>
+                <span style="font-size: 3rem;">Enter a Full name of the NBA 🤾 player and SCROLL DOWN to see<br> the
+                    Stats📊
+                    !
+
+            </p>
+        </div>
+        <br>
+        <div id="searchBarCont">
+            <input type="text" placeholder="Enter a *FULL NAME* of a NBA player" id="playerInput"
+                class="animate__animated animate__fadeInRightBig">
+            <div id="error"></div>
+            <button id="button" class="animate__animated animate__fadeInLeftBig">🏀 Find me a Baller 🏀</button>
+        </div>
+    </div>
+    <div id='statsCont'>
+        <div id="playerFullName"></div>
+
+        <div id="playerDisplay">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <!-- <div></div> -->
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
